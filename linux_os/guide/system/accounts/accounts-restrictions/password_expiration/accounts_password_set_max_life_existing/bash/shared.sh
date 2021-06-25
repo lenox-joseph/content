@@ -9,7 +9,7 @@ for acct in $(awk -F: '$3 >= 1000 &&
                        $3 != 4294967294 && 
                        $3 != 4294967295 { print $1 }' /etc/passwd); do
     # only remediate accounts that are actually failed.
-    if [ $(chage -l $acct | awk -F: '/Maximum/ {print $2}') -lt $var_accounts_maximum_age_login_defs ]; then
+    if [ $(chage -l $acct | awk -F: '/Maximum/ {print $2}') -gt $var_accounts_maximum_age_login_defs ]; then
         chage -M $var_accounts_maximum_age_login_defs $acct
     fi
 done
