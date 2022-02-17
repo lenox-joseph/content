@@ -241,6 +241,7 @@ chronyd_or_ntpd_set_maxpoll
 chronyd_or_ntpd_specify_multiple_servers
 chronyd_or_ntpd_specify_remote_server
 chronyd_run_as_chrony_user
+chronyd_server_directive
 chronyd_specify_remote_server
 clean_components_post_updating
 configure_bashrc_exec_tmux
@@ -615,6 +616,7 @@ package_openscap-scanner_installed
 package_openssh-clients_installed
 package_openssh-server_installed
 package_openssh-server_removed
+package_pam_pwquality_installed
 package_pcsc-lite_installed
 package_pigz_removed
 package_policycoreutils-python-utils_installed
@@ -1145,6 +1147,7 @@ sudo_require_reauthentication
 sudo_restrict_others_executable_permission
 sudo_restrict_privilege_elevation_to_authorized
 sudo_vdsm_nopasswd
+sudoers_default_includedir
 sudoers_explicit_command_args
 sudoers_no_command_negation
 sudoers_no_root_target
